@@ -1,1 +1,8 @@
+```txt
+User-agent: *
+
+Allow: /
+
+Sitemap: https://nithesh-hash.github.io/sitemap.xml
+```
 
