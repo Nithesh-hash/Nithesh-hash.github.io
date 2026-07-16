@@ -427,8 +427,8 @@ footer {
     }
   .recognition-image {
     display: block;
-    width: 180px;
-    height: 120px;
+    width: clamp(180px, 22vw, 280px);
+    height: clamp(120px, 15vw, 180px);
     object-fit: contain;
     margin: 18px auto;
     border-radius: 10px;
