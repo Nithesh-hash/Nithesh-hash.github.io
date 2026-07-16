@@ -425,6 +425,16 @@ footer {
         gap: 25px;
 
     }
+   .recognition-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    margin: 18px auto;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    object-fit: cover;
+}
 
 
 }
