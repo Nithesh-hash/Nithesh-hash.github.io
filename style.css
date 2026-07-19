@@ -425,12 +425,14 @@ footer {
         gap: 25px;
 
     }
- .recognition-image {
+ 
+.recognition-image {
     display: block;
     width: 100%;
     max-width: 280px;
     height: 160px;
-    object-fit: contain;
+    /* 1. Forces the image file to fill the box entirely, cropping any excess */
+    object-fit: cover; 
     margin: 18px auto;
     border-radius: 10px;
     border: 1px solid #ddd;
@@ -441,21 +443,24 @@ footer {
     overflow: hidden;
 }
 
-
 /* Laptop/Desktop */
 @media (min-width: 768px) {
     .recognition-image {
-        max-width: 300px;
-        height: 170px;
+        /* 2. Lock the physical dimensions to identical values */
+        width: 300px !important; 
+        height: 170px !important;
+        
+        /* 3. Stops parent flexbox containers from shrinking an image if text runs long */
+        flex-shrink: 0; 
     }
 }
-
 
 /* Mobile */
 @media (max-width: 767px) {
     .recognition-image {
         max-width: 90%;
         height: 150px;
+        object-fit: cover;
     }
 }
 
