@@ -425,42 +425,37 @@ footer {
         gap: 25px;
 
     }
- 
+ /* 1. The Card Container */
+.recognition-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 24px auto;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    max-width: 90%; /* Default fallback for mobile */
+}
+
+/* 2. The Image Element */
 .recognition-image {
     display: block;
-    width: 100%;
-    max-width: 280px;
-    height: 160px;
-    /* 1. Forces the image file to fill the box entirely, cropping any excess */
-    object-fit: cover; 
-    margin: 18px auto;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    background: #fff;
+    width: 100%;            /* Forces image to scale to the width of the card */
+    height: 200px;          /* Uniform physical height for ALL image containers */
+    object-fit: cover;      /* Crops the raw images perfectly into the box */
+    object-position: center;/* Keeps the center action visible */
+    border-radius: 8px;
+    margin-bottom: 16px;    /* Spaces image nicely away from text below it */
 }
 
-.recognition-card {
-    overflow: hidden;
-}
-
-/* Laptop/Desktop */
+/* Laptop/Desktop Adjustments */
 @media (min-width: 768px) {
-    .recognition-image {
-        /* 2. Lock the physical dimensions to identical values */
-        width: 300px !important; 
-        height: 170px !important;
-        
-        /* 3. Stops parent flexbox containers from shrinking an image if text runs long */
-        flex-shrink: 0; 
+    .recognition-card {
+        max-width: 750px;   /* Prevents the card layout from stretching too wide on lap */
     }
-}
-
-/* Mobile */
-@media (max-width: 767px) {
+    
     .recognition-image {
-        max-width: 90%;
-        height: 150px;
-        object-fit: cover;
+        height: 380px;      /* Taller uniform footprint to look great on desktop screens */
     }
 }
 
