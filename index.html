@@ -76,20 +76,19 @@
                 <li><a href="#tech-stack"><span class="hover-dot" aria-hidden="true"></span>Stack</a></li>
                 <li><a href="#patent"><span class="hover-dot" aria-hidden="true"></span>Patent</a></li>
                 <li><a href="#recognition"><span class="hover-dot" aria-hidden="true"></span>Recognition</a></li>
-                <li><a href="#connect"><span class="hover-dot" aria-hidden="true"></span>Connect</a></li>
             </ul>
 
             <div class="nav-actions">
+                <a href="#connect" class="nav-cta">
+                    <span>Connect</span>
+                    <span class="arrow" aria-hidden="true">↗</span>
+                </a>
+
                 <button class="theme-switch-btn" id="theme-toggle" type="button" aria-label="Toggle theme" title="Switch to Dark Mode">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
-
-                <a href="#connect" class="nav-cta">
-                    <span>Connect</span>
-                    <span class="arrow" aria-hidden="true">↗</span>
-                </a>
 
                 <button class="mobile-toggle" id="mobile-menu-btn" type="button" aria-label="Open menu">
                     <span></span>
@@ -163,9 +162,6 @@
                 <div class="profile-card">
                     <div class="profile-image-wrap">
                         <img src="profile.jpg" alt="Nithesh Kumar T Profile Picture" loading="eager">
-                        <div class="profile-overlay-badge">
-                            <span class="name">Nithesh Kumar T</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -190,15 +186,9 @@
                     <p class="about-quote">
                         "Building practical software with purpose—from institutional systems to student-focused tools."
                     </p>
-                    <div class="about-highlights">
-                        <div class="highlight-box">
-                            <div class="tag">Institution</div>
-                            <div class="name">VIT Vellore</div>
-                        </div>
-                        <div class="highlight-box">
-                            <div class="tag">Program</div>
-                            <div class="name">Integrated M.Tech Software Engineering</div>
-                        </div>
+                    <div class="about-motto">
+                        <span class="motto-tag">// PHILOSOPHY</span>
+                        <p class="motto-text"><em>Everything</em> is easy if you are busy and <em>Nothing</em> is easy if you are lazy.</p>
                     </div>
                 </div>
 
@@ -783,12 +773,14 @@
             if (mobileBtn && drawer) {
                 mobileBtn.addEventListener('click', () => {
                     const isOpen = drawer.classList.toggle('open');
+                    mobileBtn.classList.toggle('active', isOpen);
                     mobileBtn.setAttribute('aria-expanded', isOpen);
                 });
 
                 mobileLinks.forEach(link => {
                     link.addEventListener('click', () => {
                         drawer.classList.remove('open');
+                        mobileBtn.classList.remove('active');
                         mobileBtn.setAttribute('aria-expanded', 'false');
                     });
                 });
