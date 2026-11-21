@@ -76,6 +76,7 @@
                 <li><a href="#tech-stack"><span class="hover-dot" aria-hidden="true"></span>Stack</a></li>
                 <li><a href="#patent"><span class="hover-dot" aria-hidden="true"></span>Patent</a></li>
                 <li><a href="#recognition"><span class="hover-dot" aria-hidden="true"></span>Recognition</a></li>
+                <li><a href="#featured"><span class="hover-dot" aria-hidden="true"></span>Featured</a></li>
             </ul>
 
             <div class="nav-actions">
@@ -109,6 +110,7 @@
             <li><a href="#tech-stack" class="mobile-link">Tech Stack</a></li>
             <li><a href="#patent" class="mobile-link">Patent</a></li>
             <li><a href="#recognition" class="mobile-link">Recognition</a></li>
+            <li><a href="#featured" class="mobile-link">Featured</a></li>
             <li><a href="#connect" class="mobile-link">Connect</a></li>
         </ul>
     </div>
@@ -602,6 +604,57 @@
         </section>
 
         <!-- ==========================================================================
+             Featured Section
+             ========================================================================== -->
+        <section class="panel" id="featured">
+            <div class="panel-header">
+                <div>
+                    <p class="panel-eyebrow">Editorial & Press</p>
+                    <h2 class="panel-title">FEATURED</h2>
+                </div>
+                <p class="panel-desc">
+                    Publications and institutional media features highlighting academic milestones and alumni journeys.
+                </p>
+            </div>
+
+            <div class="featured-showcase">
+                <!-- Featured 01: Innovation Ambassador -->
+                <article class="featured-card">
+                    <div class="featured-img-col">
+                        <div class="featured-img-wrap award-img-wrap" data-img="images/innovation-ambassador-iic-vit.jpg" data-caption="Innovation Ambassador Recognition – VIT IIC (October 2026)">
+                            <img src="images/innovation-ambassador-iic-vit.jpg" alt="Innovation Ambassador Recognition – VIT IIC" loading="lazy">
+                            <span class="award-zoom-hint">Enlarge ↗</span>
+                        </div>
+                    </div>
+                    <div class="featured-content-col">
+                        <div class="featured-tag">IIC Recognition</div>
+                        <h3 class="featured-title">Innovation Ambassador Recognition – VIT IIC</h3>
+                        <p class="featured-desc">
+                            Recognised by the Institution's Innovation Council (IIC), VIT Vellore, for successfully completing the Foundation and Advanced Levels of Innovation Ambassador Training in October 2026.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Featured 02: Alumni Spotlight -->
+                <article class="featured-card">
+                    <div class="featured-img-col">
+                        <div class="featured-img-wrap award-img-wrap" data-img="images/alumni-spotlight-sparkle-25.jpg" data-caption="Alumni Spotlight – SPARKLE-25 (Adarsh Matric. Hr. Sec. School Silver Jubilee Magazine)">
+                            <img src="images/alumni-spotlight-sparkle-25.jpg" alt="Alumni Spotlight SPARKLE-25 Silver Jubilee Magazine" loading="lazy">
+                            <span class="award-zoom-hint">Enlarge ↗</span>
+                        </div>
+                    </div>
+                    <div class="featured-content-col">
+                        <div class="featured-tag">Alumni Recognition</div>
+                        <h3 class="featured-title">Alumni Spotlight – SPARKLE-25</h3>
+                        <p class="featured-desc">
+                            Featured in Adarsh Matriculation Higher Secondary School's Silver Jubilee Magazine, highlighting my journey .
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
              Connect Section
              ========================================================================== -->
         <section class="panel" id="connect">
@@ -667,6 +720,7 @@
                         <li><a href="#tech-stack">Tech Stack</a></li>
                         <li><a href="#patent">Patent</a></li>
                         <li><a href="#recognition">Recognition</a></li>
+                        <li><a href="#featured">Featured</a></li>
                     </ul>
                 </div>
 
@@ -815,7 +869,7 @@
             });
 
             // Interactive Spotlight Coordinate Tracker on Cards
-            document.querySelectorAll('.project-tile, .bento-card, .impact-showcase, .patent-card').forEach(card => {
+            document.querySelectorAll('.project-tile, .bento-card, .impact-showcase, .patent-card, .featured-card').forEach(card => {
                 card.addEventListener('mousemove', (e) => {
                     const rect = card.getBoundingClientRect();
                     const x = e.clientX - rect.left;
